@@ -20,13 +20,13 @@ const AreaTag = styled.section`
 
 const TagContainer = styled.div`
    display: flex;
-   gap: 24px;
+   gap: 20px;
 `
 
 const TagEstilizada = styled.button`
    cursor: pointer;
    height: 49px;
-   padding: 10px 8px 10px 8px;
+   padding: 10px;
    border-radius: 10px;
    border: 2px solid transparent;
     &:hover {
@@ -41,12 +41,12 @@ const TagEstilizada = styled.button`
    color: white;
 `
 
-const Tags = () => {
+const Tags = ({ setTag }) => {
    return(
       <AreaTag>
          <h2>Busque por tags:</h2>
          <TagContainer>
-            {tags.map(tag => <TagEstilizada key={tag.id}>{tag.titulo}</TagEstilizada>)}
+            {tags.map(tag => <TagEstilizada key={tag.id} onClick={() => setTag(tag.tag)}>{tag.titulo}</TagEstilizada>)}
          </TagContainer>
       </AreaTag>
    )

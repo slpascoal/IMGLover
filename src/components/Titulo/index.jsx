@@ -6,7 +6,7 @@ const Titulo = styled.h2`
     font-size: 32px;
     font-weight: 400;
     line-height: 38.4px;
-    text-align: ${props => props.$alinhamento ? props.$alinhamento : 'left'};
+    text-align: ${(props) => (props.$alinhamento ? props.$alinhamento : 'left')};
 
 `
 
